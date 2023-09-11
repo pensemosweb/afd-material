@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores CSS</title>
+  <style>
+    [type="A"] {
+      border: 1px solid blueviolet;
+    }
+
+    [type] {
+      color: blue;
+    }
+
+    .olive {
+      border: 1px solid olivedrab;
+    }
+
+    #red {
+      color: red;
+    }
+
+    [data-category] {
+      border: 4px solid orange;
+      background-color: black;
+      padding: 16px;
+      margin: 20px;
+      list-style-position: inside;
+    }
+
+    body {
+      padding: 50px;
+      border: 1px solid black;
+      margin: 20px;
+    }
+
+  </style>
+</head>
+<body data-analytics='{ "miProp": "Hola" }'>
+  <h1>Un selector selecciona uno o mas elementos de la página</h1>
+  <ol type="A" data-category="selectores">
+    <li>Selector de clase --> .nombreEtiqueta, ejemplo: .btn-primary</li>
+    <li>Selector ID --> #identificador, ejemplo: #alert-modal</li>
+    <li>Selector de etiqueta -->nombreEtiqueta, ejemplo: header</li>
+    <li>Selector de atributo --> [atributio="valorDeAttributo"]</li>
+  </ol>
+  
+  <ol class="olive" type="I" data-category="nombres">
+    <li>Jesus</li>
+    <li>Vazquez</li>
+    <li>Lobato</li>
+  </ol>
+
+  <ol class="olive">
+    <li>Jesus</li>
+    <li>Vazquez</li>
+    <li>Lobato</li>
+  </ol>
+</body>
+</html>

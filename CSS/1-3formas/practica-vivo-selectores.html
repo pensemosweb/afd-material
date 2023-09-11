@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores: etiqueta, clase, id y attributo</title>
+  <style>
+    body {
+      color: white;
+    }
+
+    main {
+      background-color: black;
+      padding-block-end: 2rem;
+    }
+
+
+    p {
+      font-size: 20px;
+    }
+
+    .text-red {
+      color: red;
+    }
+
+    #usuario {
+      color: white;
+      border: 2px solid greenyellow;
+      padding: 1rem;
+      background-color: blueviolet;
+    }
+
+    .border-green {
+      border: 2px solid greenyellow;
+    }
+
+    [type] {
+      border: 2px solid white;
+    }
+
+    [type="A"] {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Selectores: etiqueta, clase, id y atributo</h1>
+      <strong id="usuario">Panfilo Perez</strong>
+    </header>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quod nulla distinctio quae ab
+        voluptate reprehenderit? Harum quasi quos modi, illum labore omnis repellendus vitae sunt aperiam. Possimus,
+        suscipit consectetur.
+      </p>
+      <p class="text-red border-green">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, quasi deserunt
+        incidunt
+        sapiente aspernatur
+        culpa consectetur enim reiciendis, nemo doloremque consequatur repudiandae harum perspiciatis? Quas quibusdam
+        quos illo in nesciunt?</p>
+
+      <p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deleniti a repellat d.</p>
+
+      <ol type="I">
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+        <li>Cinco</li>
+      </ol>
+
+      <ol type="A">
+        <li>Manzanas</li>
+        <li>Peras</li>
+        <li>platano</li>
+        <li>Limon</li>
+        <li>Durazno</li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+</head>
+<body>
+  <style>
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: 700px;
+      justify-content: center;
+      align-items:baseline;
+      /*writing-mode:horizontal-tb; /* Block flow direction*/
+      /*direction:ltr; /* inline base direction */
+      border: 1px solid red;
+    }
+
+    div, img {
+      padding: 1rem;
+      font-size: 4rem;
+      border: 1px solid black;
+      /*flex-grow: ;
+      flex-shrink: ;
+      flex-basis: ;*/
+      
+      /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flext-basis'> ] */
+      
+      /* flex: none; /* 0 0 auto */
+      /* flex: initial; /* 0 1 auto */
+      /* flex: auto; /* 1 1 auto */
+      /* flex: 1; /* flex: 1 1 0*/
+      flex: initial;
+    }
+  </style>
+  <section>
+    <div>Home</div>
+    <div>About</div>
+    <div>Help</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <img src="./flex-direction-terms.svg"/>
+    <div>10</div>
+  </section>
+</body>
+</html>

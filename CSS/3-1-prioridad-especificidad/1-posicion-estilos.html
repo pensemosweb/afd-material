@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prioridad de estilos por la posición en la que estan definidos</title>
+  <style>
+    h1 {
+      color: red;
+    }
+
+    h1 {
+      color: orange;
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+      <h1>Encabezado</h1>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <header>
+            <h2>Huevos con frijoles</h2>
+          </header>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus beatae necessitatibus at quidem. Atque facilis odio eligendi aliquam repellat, pariatur nobis mollitia reiciendis recusandae at, quae, maxime laboriosam! Sunt!
+          </div>
+          <footer>
+            Pie de la receta de huevos con frijoes
+          </footer>
+        </section>
+      </article>
+    </main>
+   
+    <aside>
+      contenido relacionado/lateral indirectamente
+    </aside>
+    
+    <footer>
+      Pie de la página
+    </footer>
+</body>
+</html>

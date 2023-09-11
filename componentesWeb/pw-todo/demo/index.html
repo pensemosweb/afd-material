@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    //import '../pw-todo.js';
+    import items from './todos.js';
+    
+    render(
+      html`
+        <pw-todo
+          @pw-todo-item-done=${console.log}
+        title="Hello" .todos=${items}>
+          some light-dom
+        </pw-todo>
+      `,
+      document.querySelector('#demo')
+    );
+
+    setTimeout(() => {
+      import('../pw-todo.js');
+    }, 2000);
+
+
+    document.querySelector('#demo')
+    .addEventListener('pw-todo-item-done', (e) => console.log('From #demo', e))
+  </script>
+</body>
+</html>

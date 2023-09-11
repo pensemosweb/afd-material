@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS position</title>
+    <style>
+      body {
+        min-height: 1500px;
+        font-size: 12px;
+      }
+
+      .square {
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        border: 1px solid black;
+        word-wrap: break-word;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .green {
+        background-color: green;
+        color: white;
+      }
+
+      .static {
+        position: static;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="square blue"></div>
+      <div class="square green static">position:static</div>
+      <div class="square blue"></div>
+    </section>
+
+    <style>
+      .relative {
+        position: relative;
+        left: 300px;
+      }
+    </style>
+    <section>
+      <div class="square blue"></div>
+      <div class="square green relative">position:relative;left:300px;</div>
+      <div class="square blue"></div>
+    </section>
+
+    <style>
+      .absolute {
+        position: absolute;
+        left: 300px;
+      }
+    </style>
+    <section>
+      <div class="square blue"></div>
+      <div class="square green absolute">position:absolute;left:300px;</div>
+      <div class="square blue"></div>
+    </section>
+
+    <style>
+      .positioning {
+        top: 0px;
+        left: 500px;
+      }
+    </style>
+    <section>
+      <div class="square blue"></div>
+      <div class="square green absolute positioning">
+        position:absolute;top:50px;left:500px
+      </div>
+      <div class="square blue"></div>
+    </section>
+
+    <style>
+      .fixed {
+        position: fixed;
+        top: 0px;
+        left: 300px;
+      }
+    </style>
+    <section>
+      <div class="square blue"></div>
+      <div class="square green fixed">position:fixed;</div>
+      <div class="square blue"></div>
+    </section>
+
+    <style>
+      .sticky {
+        position: sticky;
+        top: 0px;
+      }
+    </style>
+    <section style="height: 150px">
+      <div class="square blue"></div>
+      <div class="square green sticky">position:sticky;top: 0;</div>
+      <div class="square blue"></div>
+    </section>
+  </body>
+</html>

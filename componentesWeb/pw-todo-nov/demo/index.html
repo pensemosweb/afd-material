@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../pw-todo-nov.js';
+
+    const items = ['comer', 'cenar', 'dormir'];
+
+    render(
+      html`<pw-todo-nov
+        .todoItems=${items}
+      ></pw-todo-nov>`,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

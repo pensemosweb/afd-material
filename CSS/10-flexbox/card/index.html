@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card con flexbox</title>
+  <style>
+    body {
+      padding: 1rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      padding-block-start: 0.5rem;
+      padding-block-end: 0.5rem;
+    }
+
+    .card-header,
+    .card-content,
+    .card-actions {
+      padding-inline: 0.5rem;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .card-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      inline-size: 50px;
+      block-size: 50px;
+      background-color: orange;
+      border-radius: 50%;
+    }
+
+    .card-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-title__title {
+      font-size: 1rem;
+      margin-block-end: 0.5rem;
+    }
+
+    .card-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .card-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <article class="card" style="inline-size: 600px;">
+    <header class="card-header">
+      <div class="card-avatar">J</div>
+      <div class="card-title">
+        <h2 class="card-title__title">Camarones y Chorizo Paella</h2>
+        <time class="card-title__date">Viernes, 27 de Julio del 2023</time>
+      </div>
+      <div class="card-options">
+        <span>੶</span>
+        <span>੶</span>
+        <span>੶</span>
+      </div>
+    </header>
+    <img class="card-image" src="./comida-sana-variada.jpg" alt="Camarones y chorizo Paella">
+    <section class="card-content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fuga cum harum placeat magnam quidem nam deserunt.
+        Nobis soluta eum vitae hic non. Nobis odio pariatur, accusantium maxime nam quasi.</p>
+    </section>
+    <footer class="card-actions">
+      <img src="" class="card-actions__love">♥
+      <img src="" class="card-actions__share">
+      <span>&#709;</span>
+    </footer>
+  </article>
+</body>
+
+</html>

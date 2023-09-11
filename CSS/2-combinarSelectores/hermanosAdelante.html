@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona hermanos que van adelante del punto de partida, 1 o mas elementos</title>
+    <style>
+      header ~ div {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        hermano antes
+      </div>
+
+      <header>
+        <h1>Selector hermanos directos</h1>
+      </header>
+      <p>Parrafo</p>
+      <div>
+        Hermano despues
+        <div>No soy hermano de header</div>
+      </div>
+
+      <div>
+        Hermano despues
+      </div>
+    </section>
+  </body>
+</html>

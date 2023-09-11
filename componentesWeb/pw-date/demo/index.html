@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    pw-date::before {
+      content: "Hola";
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    p.verde {
+      color: green;
+    }
+
+    /*p[slot="before"] {
+      color: green;
+    }*/
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../pw-date.js';
+
+    render(
+      html`
+        <pw-date
+          date="2022-12-28"
+          .dateOptions=${
+            {
+              weekday: 'long',
+              month: 'long'
+            }
+          }
+          .timeOptions=${{
+            hour12: true
+          }} 
+        >
+          <p slot="before">Antes de fecha</p>
+          <p slot="after">Despues de fecha</p>
+        </pw-date>
+
+
+        <pw-date
+          algo-otro
+          .date=${new Date()}
+          .dateOptions=${
+            {
+
+            }
+          }
+          .timeOptions=${{
+            second: '2-digit'
+          }} 
+        >
+        
+          <div slot="before">
+            <p class="verde">Antes de fecha</p>
+          </div>
+          <p slot="before">Otro dentro de before</p>
+          <p slot="after">Despues de fecha</p>
+        </pw-date>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>

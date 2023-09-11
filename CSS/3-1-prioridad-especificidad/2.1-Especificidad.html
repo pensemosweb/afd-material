@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 especificidad</title>
+  <style>
+    /* selector de attributo = 10, misma categoria que selector de clase*/
+    [data-title] {
+      color: red;
+    }
+
+    li {
+      color: blue;
+    }
+
+    /* selector pseudo-elemento = 1, igual que un selector de etiqueta */
+    ::marker {
+      color: greenyellow;
+      font-weight: bold;
+    }
+
+    /* selector de pseudo-clase = 10, igual que un selector de clase*/
+    li:active {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 data-title>Encabezado</h1>
+  </header>
+
+  <main>
+    <article>
+      <section>
+        <header>
+          <h2>Huevos con frijoles</h2>
+        </header>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus beatae necessitatibus at
+          quidem. Atque facilis odio eligendi aliquam repellat, pariatur nobis mollitia reiciendis recusandae at, quae,
+          maxime laboriosam! Sunt!
+
+          <ol>
+            <li>Huevos</li>
+            <li>frijoles</li>
+          </ol>
+        </div>
+        <footer>
+          Pie de la receta de huevos con frijoes
+        </footer>
+      </section>
+    </article>
+  </main>
+
+  <aside>
+    contenido relacionado/lateral indirectamente
+  </aside>
+
+  <footer>
+    Pie de la página
+  </footer>
+</body>
+
+</html>

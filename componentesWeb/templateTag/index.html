@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiqueta Template</title>
+</head>
+<body>
+  <template>
+    <style>
+      h1 { background-color: red; }
+    </style>
+    <h1>Hola son un encabezado dentro de {{valor}}</h1>
+  </template
+  <p>Parrafo para meter relleno</p>
+
+  <div id="target"></div>
+
+  <script>
+    const rawTpl = document.querySelector('template');
+    const content = rawTpl.content.cloneNode(true);
+    const target = document.querySelector('#target');
+    target.appendChild(content);
+    target.appendChild(rawTpl.content.cloneNode(true));
+
+
+
+  on_isloadingChanged(attrName, oldVal, newVal) {
+    if(oldVal === newVal) {
+      return;
+    }
+
+    const h1 = target.querySelector('h1');
+    const strHTML = h1.innerHTML;
+    const strNuevo = strHTML.replace(`{{${attrName}}}`, newVal);
+    h1.innerHTML = strNuevo
+  }
+  </script>
+</body>
+</html>

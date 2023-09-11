@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combinar Selectores</title>
+  <style>
+    /* Selector universal */
+    * {
+      color: blue;
+    }
+
+    p { color: green; }
+
+    /* Combinacion de selectores, solo usarlos como ultima opción */
+    section p {
+      color:blueviolet;
+    }
+
+    section .subsection-p {
+      color:black;
+    }
+
+    section section p {
+      color:darkorange;
+    }
+
+    body section #primer-h3 { /* 12 */
+      border: 2px solid red;
+    }
+
+    section {}
+    p {}
+
+    .text-left { text-align: left; font-weight: bold;}
+    .text-right { text-align: right; }
+
+    html body #primer-h3 {
+      border
+    }
+    
+    section [id="primer-h3"] {
+      background-color: cyan;
+    }
+
+    #id .clase p {}
+    .clase #id p {}
+    p .clase #id {}
+    .clase p #id {}
+    .clase #id p {}
+
+    p.subsection-p {
+      border: 2px solid green;
+    }
+
+    section h2.subsection-p {
+      border: 5px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Combinar selectores</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eius beatae, illo aliquam accusamus, doloremque maxime saepe facere eos maiores quibusdam inventore pariatur atque, est expedita in quae libero repellendus?</p>
+
+  <section>
+    <h2 class="subsection-p">Info</h2>
+    <p class="text-left text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti ex optio cupiditate dignissimos, eos odio perferendis, repellat quaerat velit, a animi temporibus consequatur quia veniam vitae dolor? Vel, explicabo.</p>
+    <section>
+      <h3 id="primer-h3">Sub section</h3>
+      <p class="subsection-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia totam, suscipit officia libero ea iure voluptate nesciunt dignissimos alias! A sapiente adipisci esse animi sint deleniti ducimus ipsam velit veritatis.</p>
+    </section>
+  </section>
+
+  <section>
+    <h2>Info</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti ex optio cupiditate dignissimos, eos odio perferendis, repellat quaerat velit, a animi temporibus consequatur quia veniam vitae dolor? Vel, explicabo.</p>
+    <section>
+      <h3>Sub section</h3>
+      <p class="subsection-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia totam, suscipit officia libero ea iure voluptate nesciunt dignissimos alias! A sapiente adipisci esse animi sint deleniti ducimus ipsam velit veritatis.</p>
+    </section>
+  </section>
+
+  <section>
+    <h2>Info</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti ex optio cupiditate dignissimos, eos odio perferendis, repellat quaerat velit, a animi temporibus consequatur quia veniam vitae dolor? Vel, explicabo.</p>
+    <section>
+      <h3>Sub section</h3>
+      <p class="subsection-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia totam, suscipit officia libero ea iure voluptate nesciunt dignissimos alias! A sapiente adipisci esse animi sint deleniti ducimus ipsam velit veritatis.</p>
+    </section>
+  </section>
+</body>
+</html>

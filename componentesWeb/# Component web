@@ -1,0 +1,6 @@
+# Component web
+
+- custom elements  --> Crear una nueva etiqueta
+- shadow DOM       --> DOM en las sombras, ocultan el contenido(HTML, CSS, JS). Encapsular funcionalidades
+- <template>       --> Permite crear plantillas HTML para los custom Elements (es un document fragment)
+- JS modules       --> Para cargar componentes y compartirlos

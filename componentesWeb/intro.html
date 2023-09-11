@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro web components</title>
+</head>
+<body>
+
+    <todo-app>
+      <h1>Por favor muestrame</h1>
+      <p>Hola soy un parrafo</p>
+    </todo-app>
+
+    <select>
+      <option>Hola</option>
+      <option>Hola 2</option>
+    </select>
+
+    <template id="tplTodo">
+      <style>
+        :host {
+          display: block;
+          border: 2px solid red;
+        }
+
+        h1 {
+          color: green;
+        }
+      </style>
+      <div>
+        <h1>Hola estoy en las sombrras</h1>
+        <slot></slot><!--- Ranura/espacio para insertar LightDOM -->
+      </div>
+    </template>
+
+    <script>
+      class TodoApp extends HTMLElement {
+        constructor(){
+          super();
+          this.attachShadow({ mode: 'open' });
+
+          const tpl = document.querySelector('#tplTodo');
+          this.shadowRoot.appendChild(tpl.content.cloneNode(true));
+        }
+      }
+
+      customElements.define('todo-app', TodoApp);
+    </script>
+
+    <scri
+</body>
+</html>

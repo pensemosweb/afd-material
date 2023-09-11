@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+</head>
+
+<body>
+  <h1>Ejercicio de Card</h1>
+  <style>
+    .card {
+      inline-size: 300px;
+      border: 1px solid #ccc;
+    }
+
+    header,
+    .content,
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inline-size: 50px;
+      block-size: 50px;
+      background-color: orange;
+      border-radius: 50%;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    .card__options {
+      display: flex;
+      flex-direction: column;
+      line-height: 8px;
+    }
+
+    img {
+      inline-size: 100%;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <article class="card">
+    <header>
+      <section class="avatar">R</section>
+      <section>
+        <h3>Camarones y paella</h3>
+        <time>2 de Agosto del 2023</time>
+      </section>
+      <section class="card__options">
+        <span>&#x2022;</span>
+        <span>&#x2022;</span>
+        <span>&#x2022;</span>
+      </section>
+    </header>
+    <img src="./comida-sana-variada.jpg" alt="Comida sana variada">
+    <section class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi soluta possimus quos! Laboriosam magnam
+        distinctio iste aut aliquam. Expedita iure magni commodi eos qui! Et earum quis numquam officiis?</p>
+    </section>
+    <footer>
+      <button>
+        <img src="./share.svg" alt="Imagen para compartir" width="25px" height="25px">
+      </button>
+    </footer>
+  </article>
+</body>
+
+</html>

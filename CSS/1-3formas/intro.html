@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS intro</title>
+  <style>
+    /* Un selector SELECCIONA los elementos del DOM, que hagan match con él*/
+    /* la "p" es un selector, selector de etiqueta */
+
+    /* cada etiqueta vale 1 */
+    section p { /* 2 */
+      font-size: 16px;
+    }
+
+    p,
+    h1 { /* 1, 1*/
+      font-size: 40px;
+      text-align: right;
+    }
+
+    h1 { /* 1 */ 
+      background-color: black;
+      color: white;
+    }
+
+    /* selector de etiqueta o tag selector */
+    h1 { /* 1 */
+      background-color: blueviolet;
+      border: 2px dashed black;
+    }
+  </style>
+  <!-- Ruta absoluta C:\Users\pense\Documents\pensemosweb\AFD material\CSS\estilos.css -->
+  <link rel="stylesheet" href="./estilos.css" />
+</head>
+
+<body>
+  <h1>¿Qué es un selector?</h1>
+  <section>
+    <p class="text-left">Un selector es Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quod nulla distinctio quae ab
+      voluptate reprehenderit? Harum quasi quos modi, illum labore omnis repellendus vitae sunt aperiam. Possimus,
+      suscipit consectetur.</p>
+    <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque similique laborum dolore suscipit
+      ducimus harum dolor commodi ut sit amet nemo modi, placeat ullam maiores unde iure corporis! Voluptate, quia.</p>
+  </section>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deleniti a repellat d.</p>
+  <p style="font-size: 16px;color:blue;">Recusandae blanditiis enim quibusdam id delectus ad nesciunt! Ad</p>
+  <p id="greeting">Hola ¿Cómo estas?</p>
+</body>
+
+</html>

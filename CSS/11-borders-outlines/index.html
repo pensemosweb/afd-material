@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borders vs Outlines</title>
+</head>
+<body>
+  <style> 
+    body {
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    main { display: flex; align-items: center; gap: 3rem; padding: 2rem;}
+    div { padding: 1rem;}
+    .outline div{
+      outline: 1rem solid blue;
+    }
+
+    .outline div:last-child{
+      outline: 1rem solid green;
+    }
+
+    .border div {
+      border: 1rem solid blue;
+    }
+
+    .border div:last-child {
+      border: 1rem solid green;
+    }
+  </style>
+  <main>
+    <section class="outline">
+      <div>outline: 1rem solid blue;</div>
+      <div>outline: 1rem solid green;</div>
+    </section>
+    <section class="border">
+      <div>border: 1rem solid blue;</div>
+      <div>border: 1rem solid green;</div>
+    </section>
+  </main>
+</body>
+</html>

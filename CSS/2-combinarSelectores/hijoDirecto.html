@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector combinado de hijo directo</title>
+  <style>
+    p > strong {
+      border: 2px solid green;
+    }
+
+    span > strong {}
+  </style>
+</head>
+<body>
+  <section>
+    <header>
+      <h1>Selector descendiente</h1>
+    </header>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <strong>Soy un descendiente</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <strong>Un strong</strong>
+        <span>
+          <strong>Soy un descendiente de p</strong>
+        </span>
+      </p>
+      <p id="algo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatem ad, blanditiis minima voluptates non quaerat consequatur amet molestias quibusdam tempore nisi cupiditate officia asperiores assumenda voluptas. Sed, eveniet architecto.</p>
+    </div>
+  </section>
+</body>
+</html>

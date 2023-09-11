@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS ¿Qué onda con cascade?</title>
+</head>
+
+<body>
+  <h1>Cascade</h1>
+  <p>CSS (Cascade style sheet) aplica las propiedades CSS en cascada, cualquier propiedad css
+    definido anteriormente o despues sobre el mismo elemento. Se aplican realizando un efecto en cascada.
+    Esta forma de aplicar estilos se le llama cascade. Y sigue los siguientes pasos:
+  </p>
+  <ol>
+    <li>Posición de lo estilos
+      <ul>
+        <li>Proximidad de los elementos a los estilos definidos en el codigo</li>
+      </ul>
+    </li>
+
+    <li>Especificidad,
+      <ul>
+        <li>
+          ¿Que elemento hace mejor match con el selector de una regla de CSS?
+        </li>
+      </ul>
+    </li>
+
+    <li>Origin
+      <ul>
+        <li>
+          Del menos al más especifico --> user agent, local user (SO o extension), authored, authored with !important,
+          local user (SO o extension) with !important, usear agent with !important
+        </li>
+      </ul>
+    </li>
+    <li>Importance
+      <ul>
+        <li>Del menos al más importante --> normal, animation, !important, transition</li>
+      </ul>
+    </li>
+  </ol>
+</body>
+
+</html>
