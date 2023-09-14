@@ -1,4 +1,4 @@
-import { dividir} from './calculosMate.js'
+import { dividir, sumar, restar } from "./calculosMate.js";
 
 sumar(10, 5);
 restar(10, 5);
