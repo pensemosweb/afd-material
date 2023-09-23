@@ -1,0 +1,62 @@
+/* Fuente personalizada regular (normal) */
+@font-face {
+  font-family: 'MiFuentePersonalizada';
+  src: url('ruta/a/tu/fuente-regular.woff2') format('woff2'),
+       url('ruta/a/tu/fuente-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fuente personalizada en negrita (bold) */
+@font-face {
+  font-family: 'MiFuentePersonalizada';
+  src: url('ruta/a/tu/fuente-negrita.woff2') format('woff2'),
+       url('ruta/a/tu/fuente-negrita.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+/* Fuente personalizada en cursiva (italic) */
+@font-face {
+  font-family: 'MiFuentePersonalizada';
+  src: url('ruta/a/tu/fuente-cursiva.woff2') format('woff2'),
+       url('ruta/a/tu/fuente-cursiva.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+/* Fuente personalizada en negrita y cursiva (bold italic) */
+@font-face {
+  font-family: 'MiFuentePersonalizada';
+  src: url('ruta/a/tu/fuente-negrita-cursiva.woff2') format('woff2'),
+       url('ruta/a/tu/fuente-negrita-cursiva.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+/* Aplicar la fuente personalizada regular */
+body {
+  font-family: 'MiFuentePersonalizada', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicar la fuente personalizada en negrita */
+h1 {
+  font-family: 'MiFuentePersonalizada', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Aplicar la fuente personalizada en cursiva */
+.emphasis {
+  font-family: 'MiFuentePersonalizada', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Aplicar la fuente personalizada en negrita y cursiva */
+.bold-italic {
+  font-family: 'MiFuentePersonalizada', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
