@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <form id="form">
+      <label for="name">
+        Name:
+        <input id="name" name="name" />
+      </label>
+      <label for="email">
+        E-mail:
+        <input id="email" name="email" />
+      </label>
+      <label for="message">
+        <textarea id="message" name="message"></textarea>
+      </label>
 
-<body>
-  <form id="form">
-    <label for="name">
-      Name:
-      <input id="name" name="name">
-    </label>
-    <label for="email">
-      E-mail:
-      <input id="email" name="email">
-    </label>
-    <label for="message">
-      <textarea id="message" name="message"></textarea>
-    </label>
+      <button>Enviar</button>
+    </form>
 
-    <button>Enviar</button>
-  </form>
+    <div id="mensaje"></div>
 
-
-  <div id="mensaje">
-    
-  </div>
-
-  <script src="./handleSubmit.js"></script>
-  <script src="./funciones.js"></script>
-</body>
-
+    <script src="./handleSubmit.js"></script>
+    <script src="./funciones.js"></script>
+  </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms, functions and DOM</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Nombre completo:
+        <input name="nombre" />
+      </label>
+
+      <label for="email-id">Email:</label>
+      <input type="email" id="email-id" name="email" />
+
+      <label for="mensaje-id">Mensaje:</label>
+      <textarea id="mensaje-id" name="mensaje"></textarea>
+      <button>Enviar</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", function onSubmit(e) {
+        e.preventDefault();
+        const nombre = form.elements.nombre.value;
+        const nombre2 = form.querySelector("input[name=nombre]").value;
+
+        const email = form.elements.email.value;
+        const email2 = form.querySelector("input[name=email]").value;
+
+        const mensaje = form.elements.mensaje.value;
+        const mensaje2 = form.querySelector("textarea[name=mensaje]").value;
+
+        console.log(nombre, email, mensaje);
+        console.log("--------------------");
+
+        console.log(nombre2, email2, mensaje2);
+        console.log("--------------------");
+
+        const form1 = e.target;
+        const data = new FormData(form1);
+
+        console.log(data.get("nombre"));
+        console.log(data.get("email"));
+        console.log(data.get("mensaje"));
+      });
+    </script>
+  </body>
+</html>

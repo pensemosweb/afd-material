@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcion</title>
+  </head>
+  <body>
+    <div id="mensaje"></div>
+
+    <input type="text" id="msj" />
+
+    <button onclick="onAgregarMsj()">Agregar mensaje</button>
+
+    <script>
+      function agregarMsj(msj) {
+        const div = document.getElementById("mensaje");
+        div.innerHTML = msj;
+      }
+
+      function onAgregarMsj() {
+        const msj = document.getElementById("msj").value;
+        agregarMsj(msj);
+      }
+    </script>
+  </body>
+</html>
