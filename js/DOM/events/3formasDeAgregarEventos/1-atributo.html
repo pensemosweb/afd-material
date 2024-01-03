@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Agregar Event handler usando atributos HTML</title>
+  </head>
+  <body>
+    <form onsubmit="onSubmit(event)">
+      <label>
+        Nombre completo:
+        <input name="nombre" />
+      </label>
+
+      <label for="email-id">Email:</label>
+      <input type="email" id="email-id" name="email" />
+
+      <label for="mensaje-id">Mensaje:</label>
+      <textarea id="mensaje-id" name="mensaje"></textarea>
+      <button>Enviar</button>
+    </form>
+    <script>
+      function onSubmit(event) {
+        event.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>

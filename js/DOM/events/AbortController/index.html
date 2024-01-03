@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbortController para eliminar todos los event handlers</title>
+  </head>
+  <body>
+    <p>Agregar el mismo Abort Controller a todos los event handlers</p>
+    <button>Eliminar todos los event handlers</button>
+    <script>
+      const p = document.querySelector("p");
+      const controller = new AbortController();
+
+      p.addEventListener(
+        "click",
+        () => {
+          console.log("click sobre el párrafo 1");
+        },
+        {
+          signal: controller.signal,
+          once: false,
+          passive: false,
+          capture: false,
+        }
+      );
+
+      p.addEventListener(
+        "click",
+        () => {
+          console.log("click sobre el párrafo 2");
+        },
+        { signal: controller.signal }
+      );
+
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        controller.abort();
+      });
+    </script>
+  </body>
+</html>

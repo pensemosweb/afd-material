@@ -7,8 +7,21 @@
   </head>
   <body>
     <h1>Variables</h1>
-    <script src="./variables.js"></script>
+    <script src="./basic.js"></script>
     <script src="./jsDeTerceros.js"></script>
     <script src="./otro.js"></script>
+
+    <script>
+      async function allCountries() {
+        const response = await fetch("https://restcountries.com/v3.1/all");
+        const json = await response.json();
+        console.log(json);
+      }
+
+      allCountries();
+
+      console.log("HOLA MUNDO DESDE EL BROWSER :D");
+      console.log(10 * 1000);
+    </script>
   </body>
 </html>

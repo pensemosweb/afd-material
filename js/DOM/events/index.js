@@ -1,6 +1,10 @@
-element.addEventListener("click", function () {
-  alert("hola");
-});
+element.addEventListener(
+  "click",
+  function () {
+    alert("hola");
+  },
+  { capture: false, once: false, passive: false, signal: null }
+);
 element.addEventListener("click", function (event) {
   event.preventDefault();
 });

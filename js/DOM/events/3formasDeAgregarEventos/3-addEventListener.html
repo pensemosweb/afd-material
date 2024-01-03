@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Agregar Event handler usando elem.addEventListener</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Nombre completo:
+        <input name="nombre" />
+      </label>
+
+      <label for="email-id">Email:</label>
+      <input type="email" id="email-id" name="email" />
+
+      <label for="mensaje-id">Mensaje:</label>
+      <textarea id="mensaje-id" name="mensaje"></textarea>
+      <button>Enviar</button>
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function onSubmit(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
