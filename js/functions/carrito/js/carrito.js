@@ -1,4 +1,4 @@
-function createCarrito(data) {
+export default function createCart(data) {
   function calculateSingleTotal(price, quantity) {
     return price * quantity;
   }

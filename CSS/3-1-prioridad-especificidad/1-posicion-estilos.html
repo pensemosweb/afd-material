@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prioridad de estilos por la posición en la que estan definidos</title>
-  <style>
-    h1 {
-      color: red;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Prioridad de estilos por la posición en la que estan definidos
+    </title>
+    <style>
+      h1 {
+        color: red;
+      }
 
-    h1 {
-      color: orange;
-    }
+      h1 {
+        color: orange;
+      }
 
-  </style>
-</head>
-<body>
+      article section header h2 {
+        color: green;
+      }
+
+      .todo-list li:first-child .toggle:first-child {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
     <header>
       <h1>Encabezado</h1>
     </header>
@@ -28,21 +37,43 @@
             <h2>Huevos con frijoles</h2>
           </header>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus beatae necessitatibus at quidem. Atque facilis odio eligendi aliquam repellat, pariatur nobis mollitia reiciendis recusandae at, quae, maxime laboriosam! Sunt!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            voluptatibus beatae necessitatibus at quidem. Atque facilis odio
+            eligendi aliquam repellat, pariatur nobis mollitia reiciendis
+            recusandae at, quae, maxime laboriosam! Sunt!
+
+            <ul class="todo-list">
+              <li>
+                Uno
+
+                <button class="toggle">Boton 4</button>
+                <button class="toggle">Boton 4</button>
+                <button class="toggle">Boton 4</button>
+              </li>
+              <li>
+                dos
+                <button class="toggle">Boton 4</button>
+              </li>
+              <li>
+                tres
+                <button class="toggle">Boton 4</button>
+              </li>
+              <li>
+                4
+                <button class="toggle">Boton 4</button>
+              </li>
+            </ul>
           </div>
           <footer>
+            <h2>H2 en footer</h2>
             Pie de la receta de huevos con frijoes
           </footer>
         </section>
       </article>
     </main>
-   
-    <aside>
-      contenido relacionado/lateral indirectamente
-    </aside>
-    
-    <footer>
-      Pie de la página
-    </footer>
-</body>
+
+    <aside>contenido relacionado/lateral indirectamente</aside>
+
+    <footer>Pie de la página</footer>
+  </body>
 </html>

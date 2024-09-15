@@ -1,0 +1,40 @@
+$theme-colors: (
+  "primary": #007bff,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40,
+);
+
+$spacing: (
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 3rem,
+);
+
+header {
+  color: white;
+  background-color: map-get($theme-colors, "primary");
+  padding: map-get($spacing, "3");
+}
+
+main {
+  color: black;
+  background-color: map-get($theme-colors, "light");
+  padding: map-get($spacing, "3");
+}
+
+footer {
+  color: white;
+  background-color: map-get($theme-colors, "dark");
+  padding: map-get($spacing, "3");
+}
+
+.perfil {
+  border-radius: 50%;
+}

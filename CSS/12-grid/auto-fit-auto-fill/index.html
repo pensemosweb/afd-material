@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+  </head>
+  <body>
+    <style>
+      .grid {
+        display: grid;
+        grid-auto-rows: 100px;
+        gap: 1rem;
+      }
+
+      .auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .grid > div {
+        border: 1px solid black;
+      }
+
+      .auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+    </style>
+
+    <h2>grid-template-columns: repeat(auto-fll, minmax(100px, 1fr))</h2>
+    <section class="grid auto-fill">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </section>
+
+    <h2>grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))</h2>
+    <section class="grid auto-fit">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </section>
+  </body>
+</html>

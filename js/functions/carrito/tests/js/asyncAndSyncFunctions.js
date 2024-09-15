@@ -1,0 +1,25 @@
+alert()
+console.log("Hola mundo");
+[].forEach()
+[].push()
+Object.keys()
+elemento.addEventListener()
+elemento.removeEventListener()
+Array.from()
+Array.prototype.map()
+Array.prototype.filter()
+Array.prototype.reduce()
+
+Objec.prototype.hasOwnProperty()
+Object.prototype.toString()
+Object.prototype.valueOf()
+Object.prototype.isPrototypeOf()
+Object.prototype.propertyIsEnumerable()
+Object.prototype.toLocaleString()
+
+
+fetch()
+setTimeout()
+setInterval()
+XMLHttpRequest()
+requestAnimationFrame()

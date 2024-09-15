@@ -1,0 +1,4 @@
+Link de imagen
+lisitem de la talla
+button, se le dio first
+linkitem por name, o por hasText

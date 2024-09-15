@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corriendo con el protocolo file</title>
+    <!-- No puedes cargar import con url externas desde un archivo local porque usan el protocolo file://
+      El navegador considera el protocolo file como otro origin, asi que lo bloquea
+      Esto es por la politicas de mismo origen y configuracion de seguridad.
+      Esta politica esta disenada para prevenir comportamiento malicioso. Previene limitando las
+      acciones que un script de un origen pueda realizar con recursos de otro origen
+    -->
+    <!-- <script type="module" src="./main.js"></script> -->
+    <script type="module">
+      // you can import external modules
+      import {
+        LitElement,
+        html,
+      } from "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js";
+      console.log(LitElement, html);
+
+      // you cannot import local modules because of file:// protocol, es bloquedo por seguridad
+      import { greeting } from "./variables.js";
+      console.log(greeting);
+    </script>
+  </head>
+  <body></body>
+</html>

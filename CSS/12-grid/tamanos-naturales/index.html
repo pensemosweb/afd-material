@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamano natural en grid</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --pw-col-size: min-content;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, var(--pw-col-size));
+        grid-auto-rows: 100px;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 30rem;
+      }
+
+      .grid div {
+        border: 1px solid black;
+      }
+    </style>
+
+    <select>
+      <option value="min-content">min-content</option>
+      <option value="max-content">max-content</option>
+      <option value="fit-content(3rem)">fit-content(10rem)</option>
+    </select>
+
+    <section class="grid">
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>
+        item 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+        expedita voluptatibus est voluptate, cum id aperiam, facilis at eaque,
+        praesentium tenetur accusantium rerum! Libero temporibus vero quae autem
+        officia esse?
+      </div>
+      <div>item 4</div>
+      <div>item 5</div>
+      <div>item 6</div>
+    </section>
+
+    <script>
+      const select = document.querySelector("select");
+      select.addEventListener("change", (e) => {
+        const rootNode = document.documentElement;
+        rootNode.style.setProperty("--pw-col-size", e.target.value);
+      });
+    </script>
+  </body>
+</html>

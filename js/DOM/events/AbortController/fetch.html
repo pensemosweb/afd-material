@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let isFetching = false;
+      let controller = new AbortController();
+
+      function getPosts() {
+        if (isFetching) {
+          controller.abort();
+          controller = new AbortController();
+        }
+
+        isFetching = true;
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          signal: controller.signal,
+        })
+          .then((resp) => {
+            isFetching = false;
+            return resp.json();
+          })
+          .then(console.log)
+          .catch((err) => {
+            console.warn("ABORTED");
+            console.error(err);
+          });
+      }
+
+      function cancel() {
+        controller.abort();
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="getPosts()">Traer posts</button>
+    <button onclick="cancel()">cancelar</button>
+  </body>
+</html>

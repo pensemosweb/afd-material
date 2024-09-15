@@ -1,0 +1,14 @@
+comida:
+  - name: Pizza
+    description: Me gusta la pizza
+  - name: Hamburguesa
+    description: Me gusta la hamburguesa
+  - name: Tacos
+    description: Me gustan los tacos
+hobbies:
+  - name: Bicicleta
+    description: Me gusta andar en bicicleta
+  - name: Videojuegos
+    description: Me gusta jugar videojuegos
+  - name: Programar
+    description: Me gusta programar
